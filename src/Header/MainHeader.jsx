@@ -2,8 +2,21 @@ import React, { useEffect, useState } from 'react'
 import Banner1 from '../assets/Banner1.png'
 import logo from '../assets/Logo1.png'
 
+const MENU_LINKS = [
+  { label: 'New In', href: '#' },
+  { label: 'Seoul Muse', href: '#' },
+  { label: 'Solence', href: '#' },
+  { label: 'Chiffon Frocks', href: '#' },
+  { label: 'Kameez & Shalwar Sets', href: '#' },
+  { label: 'Shirt & Skirt Sets', href: '#' },
+  { label: 'Wedding Wear', href: '#' },
+  { label: 'About Us', href: '#' },
+  { label: 'Contact', href: '#' },
+]
+
 const MainHeader = () => {
   const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +26,13 @@ const MainHeader = () => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [menuOpen])
 
   return (
     <div className="relative h-[calc(100vh-5vh)] w-full overflow-hidden">
@@ -32,7 +52,10 @@ const MainHeader = () => {
         }`}
       >
         <div className="flex items-center">
-          <button className="flex items-center gap-2 text-sm font-medium md:text-base">
+          <button
+            onClick={() => setMenuOpen(true)}
+            className="flex items-center gap-2 text-sm font-medium md:text-base"
+          >
             <i className="fa-solid fa-bars"></i>
             <span>Menu</span>
           </button>
@@ -81,6 +104,49 @@ const MainHeader = () => {
             </span>
           </button>
         </div>
+      </div>
+
+      {/* Overlay */}
+      <div
+        onClick={() => setMenuOpen(false)}
+        className={`fixed inset-0 z-50 bg-black/40 transition-opacity duration-300 ${
+          menuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
+        }`}
+      />
+
+      {/* Sidebar */}
+      <div
+        className={`fixed left-0 top-0 z-50 h-full w-72 bg-white shadow-xl transition-transform duration-300 ease-in-out md:w-80 ${
+          menuOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        <div className="flex items-center justify-between border-b border-gray-100 px-6 py-5">
+          <img
+            src={logo}
+            alt="Sista Attire Logo"
+            className="h-8 w-auto object-contain"
+          />
+          <button
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close menu"
+            className="flex h-8 w-8 items-center justify-center text-gray-700 hover:text-gray-900"
+          >
+            <i className="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+
+        <nav className="flex flex-col px-6 py-6">
+          {MENU_LINKS.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className="border-b border-gray-100 py-4 text-sm tracking-wide text-gray-800 transition-colors hover:text-gray-500"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
       </div>
     </div>
   )
