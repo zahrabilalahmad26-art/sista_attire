@@ -5,7 +5,6 @@ const Footer = () => {
   return (
     <footer className="w-full bg-[#f7f4ef] px-4 pt-12 pb-6 md:px-10 md:pt-16">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 border-b border-gray-200 pb-10 sm:grid-cols-4 md:gap-6">
-        {/* Brand column */}
         <div className="col-span-2 sm:col-span-1">
           <img
             src={Logo}
@@ -20,7 +19,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Shop */}
         <div>
           <h3 className="text-xs font-semibold tracking-wide text-gray-900">
             SHOP
@@ -34,7 +32,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Help */}
         <div>
           <h3 className="text-xs font-semibold tracking-wide text-gray-900">
             HELP
@@ -48,7 +45,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Stay connected */}
         <div>
           <h3 className="text-xs font-semibold tracking-wide text-gray-900">
             STAY CONNECTED
@@ -85,7 +81,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 pt-6 text-xs text-gray-500 sm:flex-row">
         <p>&copy; {new Date().getFullYear()} Sista Attire. All rights reserved.</p>
         <div className="flex items-center gap-5">

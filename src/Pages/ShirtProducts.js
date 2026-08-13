@@ -15,49 +15,49 @@ import Dress42 from "../assets/ShirtSkirt/Dress2(2).png"
 import Dress43 from "../assets/ShirtSkirt/Dress2(3).jpeg"
 import Dress44 from "../assets/ShirtSkirt/Dress2(4).png"
 
-export const PRODUCTS = [
-    {
-        id: 1,
-        name: 'Vespera Shirt and Dupatta',
-        price: 'Rs 99,500',
-        colors: [
-            { color: '#EDE08A', image: Dress13 },
+export const SHIRT_PRODUCTS = [
+  {
+    id: 1,
+    name: "Shirt Style One",
+    price: "Rs 21,990",
+    colors: [
+   { color: '#EDE08A', image: Dress13 },
             { color: '#B5482E', image: Dress14 },
             { color: '#1c1c1c', image: Dress11 },
             { color: '#800000', image: Dress12 },
-        ],
-    },
-    {
-        id: 2,
-        name: 'Noirea shirt, Inner and Dupatta Set',
-        price: 'Rs 110,000',
-        colors: [
-            { color: '#F0C4CB', image: Dress21 },
+    ],
+  },
+  {
+    id: 2,
+    name: "Shirt Style Two",
+    price: "Rs 24,500",
+    colors: [
+  { color: '#F0C4CB', image: Dress21 },
             { color: '#1c1c1c', image: Dress22 },
             { color: '#5f6f52', image: Dress23 },
             { color: '#800000', image: Dress24 },
-        ],
-    },
-    {
-        id: 3,
-        name: 'Zandie Shirt and Dupatta',
-        price: 'Rs 90,000',
-        colors: [
-            { color: '#800020', image: Dress31 },
-            { color: '#ffffff', image: Dress32 },
-            {color: '#EDE08A',  image: Dress33 },
-            { color: '#111111', image: Dress34 },
-        ],
-    },
-    {
-        id: 4,
-        name: 'Anari Shirt And Drape Dupatta With Pants',
-        price: 'Rs 110,000',
-        colors: [
-            { color: '#8A9A4E', image: Dress41 },
-            { color: '#111111', image: Dress42 },
-            { color: '#800020', image: Dress43 },
-            { color: '#3b2f2f', image: Dress44 },
-        ],
-    },
+    ],
+  },
+  {
+    id: 3,
+    name: "Shirt Style Three",
+    price: "Rs 19,990",
+    colors: [
+    { color: '#800020', image: Dress31 },
+              { color: '#ffffff', image: Dress32 },
+              {color: '#EDE08A',  image: Dress33 },
+              { color: '#111111', image: Dress34 },
+    ],
+  },
+  {
+    id: 4,
+    name: "Shirt Style Four",
+    price: "Rs 27,000",
+    colors: [
+   { color: '#8A9A4E', image: Dress41 },
+              { color: '#111111', image: Dress42 },
+              { color: '#800020', image: Dress43 },
+              { color: '#3b2f2f', image: Dress44 },
+    ],
+  },
 ]
