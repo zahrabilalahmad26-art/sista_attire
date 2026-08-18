@@ -14,6 +14,8 @@ import SkirtShirtPage from './Pages/SkirtShirtPage.jsx'
 import CasualPage from './Pages/CasualPage.jsx'
 import ShalwarKameezPage from './Pages/ShalwarKameezPage.jsx'
 import FrocksPage from './Pages/FrocksPage.jsx'
+import AdminApp from "./Admin/App"; 
+
 
 const Home = () => (
   <>
@@ -38,6 +40,7 @@ function App() {
         <Route path="/shop/casual" element={<CasualPage />} />
         <Route path="/shop/shalwar-kameez" element={<ShalwarKameezPage />} />
         <Route path="/shop/frocks" element={<FrocksPage />} />
+        <Route path="/admin/*" element={<AdminApp />} />
       </Routes>
     </BrowserRouter>
   )

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import WeddingWearVideo from "../assets/BannerVideo.mp4"
+import WeddingWearVideo from "../assets/BannerVideo2.mp4"
 
 const Video = () => {
   const videoRef = useRef(null)
